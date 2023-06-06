@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_100"
+    tools:context=".ui.ChooseYourSideActivity">
+
+    <ImageButton
+        android:id="@+id/ivChooseYourSideActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:minWidth="60dp"
+        android:minHeight="60dp"
+        android:padding="18dp"
+        android:src="@drawable/ic_back"
+        app:tint="@color/gray_200" />
+
+    <TextView
+        android:id="@+id/tvGreetUser"
+        style="@style/primaryTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/ivChooseYourSideActivity"
+        android:layout_centerHorizontal="true"
+        android:padding="18dp"
+        android:textColor="@color/gray_700"
+        tools:hint="@string/you_are_team_o"/>
+
+    <LinearLayout
+        android:id="@+id/llSidesContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivChooseYourSideActivity"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <ImageView
+            android:id="@+id/ivX"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_x"
+            app:tint="@color/gray_200" />
+
+        <ImageView
+            android:id="@+id/ivO"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_o"
+            app:tint="@color/gray_200"/>
+
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rgChooseSide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llSidesContainer"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RadioButton
+            android:id="@+id/rbX"
+            style="@style/primaryTextStyle"
+            android:layout_width="wrap_content"
+            android:textSize="24sp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/gray_200"
+            android:text="@string/team_x" />
+
+        <RadioButton
+            android:id="@+id/rbO"
+            style="@style/primaryTextStyle"
+            android:layout_width="wrap_content"
+            android:textSize="24sp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layoutDirection="rtl"
+            android:layout_weight="1"
+            android:textColor="@color/gray_200"
+            android:text="@string/team_o" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvYourSelectedSide"
+        style="@style/primaryTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rgChooseSide"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:textColor="@color/gray_700"
+        tools:hint="@string/you_are_team_o"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonNextAfterChoosingSide"
+        style="@style/buttonStyle"
+        android:layout_below="@id/tvYourSelectedSide"
+        android:layout_marginTop="28dp"
+        android:foreground="?android:selectableItemBackground"
+        android:text="@string/next" />
+
+
+
+</RelativeLayout>

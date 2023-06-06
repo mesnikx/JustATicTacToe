@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_100"
+    android:padding="18dp"
+    tools:context=".ui.GameActivity">
+
+    <ImageButton
+        android:id="@+id/ivCloseGameActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:minWidth="60dp"
+        android:minHeight="60dp"
+        android:padding="18dp"
+        android:src="@drawable/ic_back"
+        app:tint="@color/gray_200" />
+
+    <RelativeLayout
+        android:id="@+id/rlFriendOrAIContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivCloseGameActivity"
+        android:padding="6dp">
+
+        <TextView
+            android:id="@+id/tvFriendOrAISteps"
+            style="@style/stepperTextStyle"
+            android:text="0" />
+
+        <ImageView
+            android:id="@+id/ivFriendOrAI"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_robot" />
+
+        <TextView
+            android:id="@+id/tvFriendOrAIName"
+            style="@style/stepperTextStyle"
+            android:layout_below="@id/ivFriendOrAI"
+            android:layout_alignParentEnd="true"
+            android:background="@null"
+            android:textColor="@color/gray_700"
+            tools:text="Robot" />
+
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvGameContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlFriendOrAIContainer"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="18dp"
+        android:padding="8dp"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:id="@+id/llGameContainer"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@id/ivCloseGameActivity"
+            android:background="@color/gray_200"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:weightSum="3.02">
+
+            <LinearLayout
+                android:id="@+id/llFirstRowContainer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="3.02">
+
+                <ImageView
+                    android:id="@+id/ivFirst"
+                    style="@style/oneGameViewStyle"
+                    android:tag="1"
+                    android:scaleType="centerInside"/>
+
+                <View style="@style/verticalDividerViewStyle" />
+
+                <ImageView
+                    android:id="@+id/ivSecond"
+                    style="@style/oneGameViewStyle"
+                    android:tag="2"
+                    android:scaleType="centerInside"/>
+
+                <View style="@style/verticalDividerViewStyle" />
+
+                <ImageView
+                    android:id="@+id/ivThird"
+                    style="@style/oneGameViewStyle"
+                    android:tag="3"
+                    android:scaleType="centerInside"/>
+
+            </LinearLayout>
+
+            <View style="@style/horizontalDividerViewStyle" />
+
+            <LinearLayout
+                android:id="@+id/llSecondRowContainer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/ivFourth"
+                    style="@style/oneGameViewStyle"
+                    android:tag="4"
+                    android:scaleType="centerInside"/>
+
+                <View style="@style/verticalDividerViewStyle" />
+
+                <ImageView
+                    android:id="@+id/ivFifth"
+                    style="@style/oneGameViewStyle"
+                    android:tag="5"
+                    android:scaleType="centerInside"/>
+
+                <View style="@style/verticalDividerViewStyle" />
+
+                <ImageView
+                    android:id="@+id/ivSixth"
+                    style="@style/oneGameViewStyle"
+                    android:tag="6"
+                    android:scaleType="centerInside"/>
+
+            </LinearLayout>
+
+            <View style="@style/horizontalDividerViewStyle" />
+
+            <LinearLayout
+                android:id="@+id/llThirdRowContainer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/ivSeventh"
+                    style="@style/oneGameViewStyle"
+                    android:tag="7"
+                    android:scaleType="centerInside"/>
+
+                <View style="@style/verticalDividerViewStyle" />
+
+                <ImageView
+                    android:id="@+id/ivEighth"
+                    style="@style/oneGameViewStyle"
+                    android:tag="8"
+                    android:scaleType="centerInside"/>
+
+                <View style="@style/verticalDividerViewStyle" />
+
+                <ImageView
+                    android:id="@+id/ivNinth"
+                    style="@style/oneGameViewStyle"
+                    android:tag="9"
+                    android:scaleType="centerInside"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/rlUserContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cvGameContainer"
+        android:padding="6dp">
+
+        <ImageView
+            android:id="@+id/ivUser"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_face" />
+
+        <TextView
+            android:id="@+id/tvUsername"
+            style="@style/stepperTextStyle"
+            android:layout_below="@id/ivUser"
+            android:layout_alignParentStart="true"
+            android:background="@null"
+            android:textColor="@color/gray_700"
+            tools:text="User" />
+
+        <TextView
+            android:id="@+id/tvUserSteps"
+            style="@style/stepperTextStyle"
+            android:layout_alignParentEnd="true"
+            android:text="0" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvGameResult"
+        style="@style/primaryTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlUserContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:textColor="@color/gray_700"
+        tools:hint="@string/game_won"/>
+
+</RelativeLayout>

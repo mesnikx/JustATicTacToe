@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:background="@color/gray_100"
+    android:padding="8dp"
+    tools:context=".ui.ResultActivity">
+
+    <ImageView
+        android:id="@+id/ivAppLogoOnResScreen"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="28dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/app_logo" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lavAnimation"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_below="@id/ivAppLogoOnResScreen"
+        android:layout_centerHorizontal="true"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/ic_animation_for_winner" />
+
+    <TextView
+        android:id="@+id/tvWinnerMessage"
+        style="@style/primaryTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lavAnimation"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:textColor="@color/gray_700"
+        tools:hint="@string/winner" />
+
+    <LinearLayout
+        android:id="@+id/llSideContainer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_below="@id/tvWinnerMessage">
+
+        <ImageView
+            android:id="@+id/ivWinningSide"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            tools:src="@drawable/ic_x" />
+
+        <TextView
+            android:id="@+id/tvWinningSide"
+            style="@style/primaryTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/team_x" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btPlayAgain"
+        style="@style/buttonStyle"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:text="@string/play_again" />
+
+</RelativeLayout>

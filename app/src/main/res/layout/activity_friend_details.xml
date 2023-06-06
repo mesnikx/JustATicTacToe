@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_100"
+    android:padding="18dp"
+    tools:context=".ui.FriendDetailsActivity">
+
+    <ImageButton
+        android:id="@+id/ibCloseFriendDetailsScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:minWidth="60dp"
+        android:minHeight="60dp"
+        android:padding="18dp"
+        android:src="@drawable/ic_back"
+        app:tint="@color/gray_200" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutFriendName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ibCloseFriendDetailsScreen"
+        android:layout_marginTop="80dp"
+        android:padding="18dp"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        app:startIconDrawable="@drawable/ic_face"
+        app:startIconTint="@color/gray_200">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/enterFriendName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_friend_name"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/gray_700"
+            android:textColorHint="@color/gray_700"
+            android:textSize="18sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonNextAfterFriendDetails"
+        style="@style/buttonStyle"
+        android:layout_below="@id/textInputLayoutFriendName"
+        android:layout_marginTop="28dp"
+        android:foreground="?android:selectableItemBackground"
+        android:text="@string/next" />
+
+</RelativeLayout>

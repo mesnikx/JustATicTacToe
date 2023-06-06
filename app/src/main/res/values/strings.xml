@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">JustATicTacToe</string>
+    <string name="let_s_play_choose_mode">Let\'s play, Choose Mode</string>
+    <string name="wid_your_friend">With your friend</string>
+    <string name="wid_ai">With AI</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="enter_friend_name">Enter your name friend</string>
+    <string name="next">Next</string>
+    <string name="please_enter_valid_name">Please enter a proper name</string>
+    <string name="team_x">Team X</string>
+    <string name="team_o">Team O</string>
+    <string name="you_are_team_o">You are team: </string>
+    <string name="choose_a_side">Choose your team!</string>
+    <string name="all_set">You are all set</string>
+    <string name="play">Play</string>
+    <string name="game_won"> won the game!</string>
+    <string name="winner">WINNER</string>
+    <string name="play_again">Play again</string>
+</resources>
